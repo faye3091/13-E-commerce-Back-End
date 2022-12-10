@@ -21,9 +21,9 @@ router.get('/', (req, res) => {
     ]
   })
     .then(dbProductData => res.json(dbProductData))
-    .catch(err => {
-      console.log(err);
-      res.status(500).json(err);
+    .catch(error => {
+      console.log(error);
+      res.status(500).json(error);
     });
 });
 
@@ -54,9 +54,9 @@ router.get('/:id', (req, res) => {
       }
       res.json(dbProductData);
     })
-    .catch(err => {
-      console.log(err);
-      res.status(500).json(err);
+    .catch(error => {
+      console.log(error);
+      res.status(500).json(error);
     });
 });
 
@@ -92,9 +92,9 @@ router.post('/', (req, res) => {
       res.status(200).json(product);
     })
     .then((productTagIds) => res.status(200).json(productTagIds))
-    .catch((err) => {
-      console.log(err);
-      res.status(400).json(err);
+    .catch((error) => {
+      console.log(error);
+      res.status(400).json(error);
     });
 });
 
@@ -134,9 +134,9 @@ router.put('/:id', (req, res) => {
       ]);
     })
     .then((updatedProductTags) => res.json(updatedProductTags))
-    .catch((err) => {
+    .catch((error) => {
       // console.log(err);
-      res.status(400).json(err);
+      res.status(400).json(error);
     });
 });
 
@@ -154,9 +154,9 @@ router.delete('/:id', (req, res) => {
     }
     res.json(dbProductData);
   })
-  .catch(err => {
-    console.log(err);
-    res.status(500).json(err);
+  .catch(error => {
+    console.log(erroq);
+    res.status(500).json(error);
   });
 });
 
